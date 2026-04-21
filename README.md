@@ -16,13 +16,17 @@ g++ -std=c++17 -o namesofGod namesofGod.cpp
 ./namesofGod [options]
 ```
 
+Running with no arguments picks and prints one Name of God at random.
+
 ### Options
 
 | Flag | Long form | Description |
 |------|-----------|-------------|
+| `-p` | `--pick` | Pick and print one Name of God at random (default) |
 | `-l` | `--list` | List all Names of God with details |
 | `-f <str>` | `--filter <str>` | List only names matching `<str>` (case-insensitive) |
 | `-c` | `--count` | Show the count of Names of God |
+| `-sr` | `--showref` | Call `bv` for each reference after printing (requires `bv` on PATH) |
 | `-v` | `--version` | Show version |
 | `-h` | `--help` | Show help message |
 
@@ -30,6 +34,18 @@ If `--list` and `--count` are both given, the list is shown first.
 If `--filter` and `--count` are both given, the count reflects only the matched names.
 
 ## Examples
+
+Pick a random name:
+```bash
+./namesofGod
+./namesofGod --pick
+```
+
+Pick a random name and show its Bible verses:
+```bash
+./namesofGod -sr
+./namesofGod -p -sr
+```
 
 List all names:
 ```bash
@@ -40,6 +56,11 @@ Filter by partial name (case-insensitive):
 ```bash
 ./namesofGod --filter yahweh
 ./namesofGod -f olam
+```
+
+Filter and show verses for each result:
+```bash
+./namesofGod -f yahweh -sr
 ```
 
 Show total count:
