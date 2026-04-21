@@ -80,7 +80,7 @@ List filtered results and their count:
 
 ## Names Included
 
-19 names are included, covering the major Hebrew and Greek names and titles of God:
+25 names are included, covering the major Hebrew, Aramaic, and Greek names and titles of God:
 
 - El, Eloah
 - Elohim
@@ -101,6 +101,12 @@ List filtered results and their count:
 - El Roi
 - El Olam
 - El Gibhor
+- El Hannun
+- El Emunah
+- Qanna
+- Shaphat
+- Abba
+- Ancient of Days
 
 ## License
 
