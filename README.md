@@ -27,11 +27,13 @@ Running with no arguments picks and prints one Name of God at random.
 | `-f <str>` | `--filter <str>` | List only names matching `<str>` (case-insensitive) |
 | `-c` | `--count` | Show the count of Names of God |
 | `-sr` | `--showref` | Call `bv` for each reference after printing (requires `bv` on PATH) |
+| `-esv` | `--openesv` | Open references on esv.org in the browser (prompts before opening) |
 | `-v` | `--version` | Show version |
 | `-h` | `--help` | Show help message |
 
 If `--list` and `--count` are both given, the list is shown first.  
-If `--filter` and `--count` are both given, the count reflects only the matched names.
+If `--filter` and `--count` are both given, the count reflects only the matched names.  
+Using `-esv` or `-sr` alone defaults to pick mode.
 
 ## Examples
 
@@ -41,10 +43,16 @@ Pick a random name:
 ./namesofGod --pick
 ```
 
-Pick a random name and show its Bible verses:
+Pick a random name and show its Bible verses via `bv`:
 ```bash
 ./namesofGod -sr
 ./namesofGod -p -sr
+```
+
+Pick a random name and open its references on esv.org:
+```bash
+./namesofGod -esv
+./namesofGod -p -esv
 ```
 
 List all names:
@@ -58,9 +66,9 @@ Filter by partial name (case-insensitive):
 ./namesofGod -f olam
 ```
 
-Filter and show verses for each result:
+Filter and open references on esv.org:
 ```bash
-./namesofGod -f yahweh -sr
+./namesofGod -f shalom -esv
 ```
 
 Show total count:
